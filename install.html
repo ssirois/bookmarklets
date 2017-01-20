@@ -1,0 +1,62 @@
+<!doctype html>
+<!--
+install.html — provides a bookmarklet installation/documentation interface
+
+Copyright 2017 Samuel Sirois (sds) <samuel@sirois.info>
+
+This file is part of sds bookmarklet collection.
+
+sds bookmarklet collection is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+sds bookmarklet collection is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with sds bookmarklet collection.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Install Bookmarklets</title>
+  </head>
+  <body>
+    <h1>Install Bookmarklets</h1>
+    <h2>Instructions</h2>
+    <p>Open contextual menu of a link (right click) and select <em>Bookmark This Link</em>.</p>
+    <h2>Bookmarklets</h2>
+    <dl>
+      <dt>
+        <a href="javascript:(function(){
+          var redmineInstanceHome = location.protocol + '//' + location.host;
+
+          var today = new Date(),
+              day = today.getDay(),
+              mondayDiff = today.getDate() - (day - (day === 0 ? 6:1)),
+              fridayDiff = today.getDate() + (5 - day);
+
+          var lastMonday = new Date(today.setDate(mondayDiff));
+          var nextFriday = new Date(today.setDate(fridayDiff));
+
+          var reportURL = redmineInstanceHome + '/time_entries/report?utf8=✓&criteria[]=project&criteria[]=issue&f[]=spent_on&op[spent_on]=><&v[spent_on][]=' + lastMonday.toISOString().split('T')[0] + '&v[spent_on][]=' + nextFriday.toISOString().split('T')[0] + '&f[]=user_id&op[user_id]==&v[user_id][]=me&f[]=&c[]=project&c[]=spent_on&c[]=user&c[]=activity&c[]=issue&c[]=comments&c[]=hours&columns=day&criteria[]=';
+
+          location.href = encodeURI(reportURL);
+        })();">Redmine Current Work Week Report</a>
+      </dt>
+      <dd>
+        <p>This bookmarklet redirects to a Redmine URL providing a timesheet report of current work week.</p>
+        <p><strong>Note:</strong> you need to already be looking at your Redmine instance when using this bookmarklet.</p>
+        <p>If you wish to hardcode your own instance <var>protocol</var> and <var>host</var>, simply change the
+        <var>redmineInstanceHome</var> variable in the bookmarklet's code like so:</p>
+        <h3>Change <var>redmineInstanceHome</var> from:</h3>
+        <pre><code>var redmineInstanceHome = location.protocol + '//' + location.host;</code></pre>
+        <h3>Change <var>redmineInstanceHome</var> to:</h3>
+        <pre><code>var redmineInstanceHome = 'https://redmine.example.com/';</code></pre>
+      </dd>
+    </dl>
+  </body>
+</html>
