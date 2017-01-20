@@ -1,0 +1,50 @@
+= README
+Samuel Sirois (sds) <samuel@sirois.info>
+2017-01-20
+Bookmarklet collection
+
+:copyright: (C) 2017 {author}
+:keywords: bookmarklet, javascript, html
+:page-layout: base
+:page-description: {description}
+:page-keywords: {keywords}
+:toc: right
+:idseparator: -
+:sectanchors:
+:source-highlighter: highlight.js
+
+== My personnal bookmarklet collection
+
+A collection of bookmarklets I use.
+
+Except mentionned otherwise, those were created by me.
+When I find a free (as in freedom) bookmarklet useful, I'll make sure to provide proper credit and licensing information.
+
+== Installing bookmarklets from this collection
+
+WARNING: *DO NOT* install those bookmarklets if you don't fully understand how they work. +
+Javascript code will be running on your machine when using those bookmarklets (or others) and *could* have access to sensitive information. +
+Of course, I do use/code those bookmarklets.
+I do not send sensitive informations with those. +
+Still… You shouldn't run code written by a single hacker blindly. +
+This is a general advise.
+
+https://github.com/ssirois/bookmarklets/archive/master.zip[Download] or link:#clone-this-repository[clone this repository] and open the link:install.html[install.html] file in your browser.
+Follow instructions provided in the install.html file.
+
+For your convenience, you could also simply point your browser to https://htmlpreview.github.io/?https://github.com/ssirois/bookmarklets/blob/master/install.html[htmlpreview.github.io]
+
+=== Clone this repository
+
+[source,bash]
+git clone git@github.com:ssirois/bookmarklets.git
+
+== License
+
+{copyright}
+
+_This_ bookmarklet collection is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+_This_ bookmarklet collection is distributed in the hope that it will be useful, but *WITHOUT ANY WARRANTY*; without even the implied warranty of *MERCHANTABILITY* or *FITNESS FOR A PARTICULAR PURPOSE*.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with _this_ bookmarklet collection.  If not, see <http://www.gnu.org/licenses/>.
