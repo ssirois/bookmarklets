@@ -3,7 +3,7 @@ Samuel Sirois (sds) <samuel@sirois.info>
 2017-01-20
 Bookmarklet collection
 
-:copyright: (C) 2017 {author}
+:copyright: (C) 2017, 2020 {author}
 :keywords: bookmarklet, javascript, html
 :page-layout: base
 :page-description: {description}

@@ -2,7 +2,7 @@
 <!--
 install.html — provides a bookmarklet installation/documentation interface
 
-Copyright 2017 Samuel Sirois (sds) <samuel@sirois.info>
+Copyright 2017, 2020 Samuel Sirois (sds) <samuel@sirois.info>
 
 This file is part of sds bookmarklet collection.
 
@@ -30,6 +30,25 @@ along with sds bookmarklet collection.  If not, see <http://www.gnu.org/licenses
     <p>Open contextual menu of a link (right click) and select <em>Bookmark This Link</em>.</p>
     <h2>Bookmarklets</h2>
     <dl>
+      <dt>
+        <a href="javascript:(function() {
+          const jitsiLogo = document.querySelector('.watermark');
+          jitsiLogo.style.setProperty('visibility', 'hidden', 'important');
+
+        })();">Remove jitsi.org watermark in a meeting room</a>
+      </dt>
+      <dd>
+        <p>This bookmarklet removes jitsi.org watermark present in a
+        meeting room.</p>
+        <p>It is convenient to jump real quick on <a
+        href="https://meet.jit.si/">https://meet.jit.si/</a> to share
+        something.</p>
+        <p>Sometimes though, the watermark is really in the way of a
+        couple lines of code. Here is a quick and dirty solution.</p>
+        <p>Of course, real solution is to <a
+        href="https://github.com/jitsi/jitsi-meet/blob/master/doc/README.md">fire
+        up a custom Jitsi instance</a>…</p>
+      </dd>
       <dt>
         <a href="javascript:(function(){
           var redmineInstanceHome = location.protocol + '//' + location.host;
